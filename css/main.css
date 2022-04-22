@@ -1,0 +1,312 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --main-color:#fe6665;
+  --sections-color:#fbded1;
+  --main-font:'Bebas Neue', cursive;
+}
+
+body {
+  height: 2000px;
+}
+
+header .navbar-brand {
+  font-family: var(--main-font);
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+header .navbar-toggler:focus, header .navbar-toggler:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+header .navbar-toggler:hover {
+  color: var(--main-color);
+}
+
+header .navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .navbar-collapse .nav-link {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  color: black;
+}
+
+header .navbar-collapse .nav-link:hover {
+  color: var(--main-color);
+}
+
+@media (max-width: 727px) {
+  header .navbar-collapse {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.homePage {
+  background-color: var(--sections-color);
+  border-radius: 20px;
+  height: 35rem;
+  overflow: hidden;
+}
+
+.homePage .homePageContent {
+  padding: 40px;
+  padding-top: 160px;
+}
+
+.homePage .homePageContent h1 {
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 100px;
+  letter-spacing: 20px;
+}
+
+.homePage .homePageContent h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.homePage .homePageImg {
+  position: relative;
+}
+
+.homePage .homePageImg img {
+  -webkit-transform: translateY(-120px);
+          transform: translateY(-120px);
+  height: 100%;
+}
+
+@media (max-width: 727px) {
+  .homePage {
+    text-align: center;
+    height: 700px;
+  }
+  .homePage .homePageContent h1 {
+    font-size: 60px;
+  }
+  .homePage .homePageContent h4 {
+    font-size: 14px;
+  }
+  .homePage .homePageImg {
+    margin-top: 30px;
+  }
+}
+
+.collections {
+  margin-top: 100px;
+}
+
+.collections h3 {
+  font-family: var(--main-font);
+  font-size: 50px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.collections .row.controls {
+  margin-bottom: 20px;
+}
+
+.collections .row.controls .control-item {
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+}
+
+.collections .row.controls .control-item a {
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  background-color: var(--main-color);
+  color: white;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.collections .row.controls .control-item a:hover {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.collections .collectionItem .card {
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.collections .collectionItem .card .img {
+  height: 400px;
+  width: 100%;
+}
+
+.collections .collectionItem .card .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.collections .collectionItem .card .card-body .button {
+  display: inline-block;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+}
+
+.collections .collectionItem .card .card-body .button a {
+  margin-top: 10px;
+  padding: 7 20px;
+  color: white;
+  background-color: var(--main-color);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.collections .collectionItem .card .card-body .button a:hover {
+  -webkit-transform: translateZ(200px);
+          transform: translateZ(200px);
+}
+
+@media (max-width: 727px) {
+  .collections .row.controls a {
+    margin-bottom: 5px;
+  }
+  .collections .collectionItem .card {
+    margin-bottom: 20px;
+  }
+  .collections .collectionItem .card .card-body .card-title {
+    font-size: 17px;
+  }
+}
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay .overlayContent {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+}
+
+.imgFit {
+  height: 400px;
+  width: 100%;
+}
+
+.overlay {
+  overflow: hidden;
+}
+
+.overlay button {
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.overlay button:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.overlay .overlayContent .card .card-body {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overlay .overlayContent .card .card-body div {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin-right: 10px;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+  cursor: pointer;
+}
+
+.overlay .overlayContent .card .card-body div img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.overlay .overlayContent .card .card-body div img:hover {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact {
+  position: fixed;
+  left: 0;
+  top: 100px;
+}
+
+.contact > a {
+  background-color: var(--main-color);
+  padding: 7px 12px;
+  color: white;
+}
+
+.contact > a:hover {
+  color: white;
+}
+
+.contact .contact-info {
+  text-align: center;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  height: 50px;
+  width: 80px;
+  -webkit-transform: translateX(-90px);
+          transform: translateX(-90px);
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.contact .contact-info a {
+  display: block;
+}
+
+.pull {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+/*# sourceMappingURL=main.css.map */
